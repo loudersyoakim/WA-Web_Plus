@@ -1,0 +1,127 @@
+/* styles/inject.css */
+/* ============================================================ */
+/* FITUR BLUR (PRIVACY MODE) */
+/* ============================================================ */
+
+/* Blur Pesan Terakhir di Daftar Chat */
+body.blur-recent ._ak8k span[dir="ltr"]._ao3e {
+  filter: blur(5px) !important;
+  transition: filter 0.2s ease-in-out;
+}
+body.blur-recent ._ak8k:hover span[dir="ltr"]._ao3e {
+  filter: blur(0) !important;
+}
+
+/* Blur Nama Pengirim di Pesan Grup */
+body.blur-group-sender ._ak8k span[dir="auto"]._ao3e {
+  filter: blur(5px) !important;
+  transition: filter 0.2s ease-in-out;
+}
+body.blur-group-sender ._ak8k:hover span[dir="auto"]._ao3e {
+  filter: blur(0) !important;
+}
+
+/* Blur Nama Kontak (Daftar Chat & Sidebar) */
+body.blur-names div[role="listitem"] div:first-child span._ao3e:not(._ak8k *),
+body.blur-names div[role="row"] div:first-child span._ao3e:not(._ak8k *) {
+  filter: blur(5px) !important;
+  transition: filter 0.2s ease-in-out;
+}
+body.blur-names
+  div[role="listitem"]:hover
+  div:first-child
+  span._ao3e:not(._ak8k *),
+body.blur-names div[role="row"]:hover div:first-child span._ao3e:not(._ak8k *) {
+  filter: blur(0) !important;
+}
+
+/* Blur Foto Profil Kontak */
+body.blur-photos img.x1n2onr6._ao3e {
+  filter: blur(10px) !important;
+  transition: filter 0.2s ease-in-out;
+}
+body.blur-photos img.x1n2onr6._ao3e:hover {
+  filter: blur(0) !important;
+}
+
+/* Blur Isi Percakapan (Di dalam chat room) */
+body.blur-conversation .message-in .copyable-text,
+body.blur-conversation .message-out .copyable-text {
+  filter: blur(5px) !important;
+  transition: filter 0.2s ease-in-out;
+}
+body.blur-conversation .message-in:hover .copyable-text,
+body.blur-conversation .message-out:hover .copyable-text {
+  filter: blur(0) !important;
+}
+
+/* Pencegah kebocoran filter ke elemen sistem/header */
+#main header span,
+._ak8q,
+[role="button"] span,
+#main ._ak8k span._ao3e {
+  filter: none !important;
+}
+
+/* ============================================================
+   FITUR RESTORE (PEMULIHAN PESAN) - ELEGAN GRADIENT
+   ============================================================ */
+.wa-restored-bubble > div > div > div {
+  border-top: 1.5px solid rgba(211, 47, 47, 0.3) !important;
+  position: relative;
+}
+/* 1. Bersihkan Balon Pesan (Hapus Garis & Gradient) */
+.wa-restored-bubble > div > div > div {
+  /* background: transparent !important; */
+  border-top: none !important;
+  box-shadow: none !important;
+  background: linear-gradient(
+    315deg,
+    rgba(211, 47, 47, 0.2) 0%,
+    rgba(211, 47, 47, 0) 45%
+  ) !important;
+  border-radius: 8px;
+}
+
+/* 2. Gaya Teks Pesan (Tetap Miring Agar Ada Pembeda) */
+.wa-restored-bubble ._akbu,
+.wa-restored-bubble div[class*="x10wlt62"] {
+  font-style: italic !important;
+  opacity: 0.85;
+}
+
+/* 3. Menampilkan Ikon Recalled di Sebelah Kiri */
+.wa-restored-bubble [data-icon="recalled"],
+.wa-restored-bubble [data-icon="msg-recall"] {
+  display: inline-block !important; /* Pastikan tidak tersembunyi */
+  /* color: #d32f2f !important; Warna merah untuk ikon penanda */
+  margin-right: 4px;
+  opacity: 1 !important;
+}
+
+/* ================================================== 
+   Custom Feature
+   ==================================================*/
+/* Gaya Tombol Download Mandiri */
+.custom-dl-standalone-bubble {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 15px !important;
+  transition: all 0.4s ease;
+  z-index: 99999; /* Pastikan berada di lapisan paling atas */
+}
+
+.custom-dl-standalone-bubble:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1);
+}
+
+.custom-dl-standalone-bubble svg {
+  display: block;
+}

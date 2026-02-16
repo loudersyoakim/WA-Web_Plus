@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WA Tools Config</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h3>WA-Web CTL</h3>
+      <p class="subtitle">Custom Extension</p>
+    </div>
+
+    <div class="container">
+      <div class="section-title">Privacy</div>
+
+      <label class="switch-container">
+        <input type="checkbox" id="blurRecent" />
+        <span class="checkmark"></span> Blur recent messages
+      </label>
+      <label
+        class="switch-container"
+        id="containerBlurGroupSender"
+        style="margin-left: 25px; display: none"
+      >
+        <input type="checkbox" id="blurGroupSender" />
+        <span class="checkmark"></span> Blur group sender name
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="blurNames" />
+        <span class="checkmark"></span> Blur contacts names
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="blurPhotos" />
+        <span class="checkmark"></span> Blur contacts photos
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="blurConversation" />
+        <span class="checkmark"></span> Blur conversation messages
+      </label>
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="playAudioSecretly" />
+        <span class="checkmark"></span> Play audio messages without informing
+        the sender
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="viewStatusSecretly" />
+        <span class="checkmark"></span> View statuses without informing the
+        poster
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="disableReadReceipts" />
+        <span class="checkmark"></span> Disable read receipts (Blue Ticks)
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="hideTyping" />
+        <span class="checkmark"></span> Hide typing status
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="hideRecording" />
+        <span class="checkmark"></span> Hide recording status
+      </label>
+      <label class="switch-container">
+        <input type="checkbox" id="hideOnline" />
+        <span class="checkmark"></span> Hide online status (Invisible Mode)
+      </label> -->
+      <label class="switch-container">
+        <input type="checkbox" id="restoreDeleted" />
+        <span class="checkmark"></span> Restore deleted messages
+      </label>
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="enableLockScreen" />
+        <span class="checkmark"></span> Enable lock screen
+        <span class="text-link">[Set Password]</span>
+      </label> -->
+
+      <div class="divider"></div>
+      <div class="section-title">Customization</div>
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="enableLikeBtn" />
+        <span class="checkmark"></span> Enable like button
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="enableTranslateBtn" />
+        <span class="checkmark"></span> Enable translate message button
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="freezeChatsList" />
+        <span class="checkmark"></span> Freeze chats list on message submission
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="enableContactStatus" />
+        <span class="checkmark"></span> Enable contact status
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="notifyOnlineContacts" />
+        <span class="checkmark"></span> Notify about online contacts
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="keepContactInfoOpen" />
+        <span class="checkmark"></span> Keep contact info open
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="enableContactInfoIcon" />
+        <span class="checkmark"></span> Enable contact info icon
+      </label> -->
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="startConvNonContact" />
+        <span class="checkmark"></span> Enable start conversation with non
+        contacts
+      </label> -->
+      <label class="switch-container">
+        <input type="checkbox" id="enableStatusDownloadBtn" />
+        <span class="checkmark"></span> Enable status download button
+      </label>
+      <!-- <label class="switch-container">
+        <input type="checkbox" id="enablePinChatsBtn" />
+        <span class="checkmark"></span> Enable pin chats button
+      </label> -->
+      <label class="switch-container">
+        <input type="checkbox" id="customChatWallpaper" />
+        <span class="checkmark"></span> Custom chat wallpaper
+      </label>
+
+      <div
+        id="wallpaperSettings"
+        style="
+          display: none;
+          margin-left: 25px;
+          margin-top: 10px;
+          padding: 12px;
+          background: #f8f9fa;
+          border-radius: 10px;
+          border: 1px solid #e9edef;
+        "
+      >
+        <input
+          type="file"
+          id="wallpaperFile"
+          accept="image/*"
+          style="width: 100%; font-size: 11px; margin-bottom: 10px"
+        />
+
+        <button
+          id="removeWallpaper"
+          style="
+            width: 100%;
+            padding: 4px;
+            font-size: 10px;
+            color: #2d2d2d;
+            background: none;
+            border: 1px solid #2d2d2d;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+          "
+        >
+          Remove
+        </button>
+
+        <div class="control-group">
+          <div style="font-size: 11px; color: #54656f">
+            Size: <span id="valSize">100</span>%
+          </div>
+          <input
+            type="range"
+            id="wallpaperSize"
+            min="5"
+            max="200"
+            value="100"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="control-group" style="margin-top: 10px">
+          <div style="font-size: 11px; color: #54656f">
+            Opacity: <span id="valOpacity">100</span>%
+          </div>
+          <input
+            type="range"
+            id="wallpaperOpacity"
+            min="0"
+            max="100"
+            value="100"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="control-group" style="margin-top: 10px">
+          <div style="font-size: 11px; color: #54656f">
+            Rotate: <span id="valRotate">0</span>°
+          </div>
+          <input
+            type="range"
+            id="wallpaperRotate"
+            min="0"
+            max="360"
+            value="0"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="control-group" style="margin-top: 10px">
+          <div style="font-size: 11px; color: #54656f">
+            Blur: <span id="valBlur">0</span>px
+          </div>
+          <input
+            type="range"
+            id="wallpaperBlur"
+            min="0"
+            max="20"
+            value="0"
+            style="width: 100%"
+          />
+        </div>
+        <div class="control-group" style="margin-top: 10px">
+          <div style="font-size: 11px; color: #54656f">
+            Feather: <span id="valEdgeBlur">0</span>%
+          </div>
+          <input
+            type="range"
+            id="wallpaperEdgeBlur"
+            min="0"
+            max="50"
+            value="0"
+            style="width: 100%"
+          />
+        </div>
+
+        <div style="font-size: 11px; margin: 10px 0 5px; color: #54656f">
+          Posisi (Geser Titik):
+        </div>
+        <div
+          id="positionPad"
+          style="
+            width: 68px;
+            height: 68px;
+            background: #dfe5e7;
+            border-radius: 10px;
+            position: relative;
+            margin: 0 auto;
+            cursor: crosshair;
+            border: 1px solid #bbc5cb;
+          "
+        >
+          <div
+            id="positionHandle"
+            style="
+              width: 10px;
+              height: 10px;
+              background: #00a884;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              pointer-events: none;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="footer"
+      style="
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        text-align: center;
+        border-top: 1px solid #f0f2f5;
+        color: #8696a0;
+        font-size: 11px;
+      "
+    >
+      <div style="font-weight: 500">Developed by <strong>Louders</strong></div>
+      <div style="opacity: 0.7; margin-top: 2px">
+        © 2026 All Rights Reserved
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

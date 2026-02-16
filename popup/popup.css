@@ -1,0 +1,94 @@
+/* Batasi tinggi body agar bisa di-scroll jika kepanjangan */
+body {
+  width: 350px;
+  max-height: 800px;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #111b21;
+}
+
+.header {
+  background-color: #00a884;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: sticky; /* Agar header tetap di atas saat di-scroll */
+  top: 0;
+  z-index: 10;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Container dengan fitur scrollbar */
+.container {
+  padding: 15px;
+  background: white;
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+/* Kustomisasi Scrollbar agar rapi */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: #cddadd;
+  border-radius: 10px;
+}
+
+.section-title {
+  color: #111b21;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e9edef;
+  margin: 20px 0;
+}
+
+/* Styling Checkbox persis seperti gambar (Kotak centang) */
+.switch-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  color: #3b4a54;
+}
+
+.switch-container input {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #00a884; /* Warna hijau khas WA */
+}
+
+.switch-container:hover {
+  color: #111b21;
+}
+
+/* Link untuk tulisan [Set Password] */
+.text-link {
+  color: #00a884;
+  margin-left: 5px;
+  font-size: 13px;
+}
+.text-link:hover {
+  text-decoration: underline;
+}

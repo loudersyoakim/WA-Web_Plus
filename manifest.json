@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "WA-Web CTL",
+  "version": "1.1.1",
+  "description": "Ekstensi kustom untuk meningkatkan privasi dan personalisasi tampilan WhatsApp Web Anda. Developed By Louders",
+  "author": "Louders",
+  "permissions": ["storage"],
+
+  "icons": {
+    "16": "icon/favicon-16x16.png",
+    "32": "icon/favicon-32x32.png",
+    "192": "icon/android-chrome-192x192.png",
+    "512": "icon/android-chrome-512x512.png"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icon/favicon-16x16.png",
+      "32": "icon/favicon-32x32.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["scripts/content.js"],
+      "css": ["styles/inject.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scripts/inject_restore.js",
+        "scripts/status_download.js",
+        "scripts/custom_background.js"
+      ],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}
