@@ -16,13 +16,13 @@ Jika Anda ingin mengembangkan lebih lanjut atau menggunakannya sebagai referensi
 
 ## ✨ Fitur Utama
 
-### 🔒 Modul Privasi (Privacy Guard)
+### 🔒 Modul Privasi
 Lindungi tampilan layar Anda dari pantauan orang sekitar:
 * **Smart Blur**: Mengaburkan cuplikan pesan terbaru, nama kontak, foto profil, dan isi percakapan secara terpisah.
 * **Group Sender Privacy**: Fitur untuk menyembunyikan nama pengirim pesan di dalam grup untuk meningkatkan anonimitas.
 * **Message Recovery**: Mendeteksi dan menampilkan kembali pesan yang telah dihapus atau ditarik oleh lawan bicara.
 
-### 🎨 Modul Kustomisasi (Advanced Customization)
+### 🎨 Modul Kustomisasi
 Personalisasi antarmuka WhatsApp Web sesuai selera estetika Anda:
 * **Independent Status Downloader**: Tombol unduh status mandiri yang ditempatkan secara strategis tanpa mengganggu navigasi asli WhatsApp.
 * **Analog-Controlled Wallpaper**: Fitur kustomisasi latar belakang chat yang dinamis:
