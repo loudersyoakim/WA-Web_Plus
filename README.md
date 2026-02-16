@@ -39,7 +39,7 @@ Personalisasi antarmuka WhatsApp Web sesuai selera estetika Anda:
 3.  Aktifkan **Developer Mode** di pojok kanan atas halaman.
 4.  Klik tombol **Load unpacked**.
 5.  Pilih folder **WA-Web CTL** yang telah Anda unduh.
-6.  Buka [WhatsApp Web](https://web.whatsapp.com) dan tekan **F5** untuk memuat ulang skrip.
+6.  Buka [WhatsApp Web](https://web.whatsapp.com) dan tekan **F5/reload** untuk memuat ulang skrip.
 
 ---
 
